@@ -1,9 +1,11 @@
 from flask import Flask,render_template,request
+from flask_cors import CORS
 
 import pandas as pd
 import pickle
 
 app= Flask(__name__)
+CORS(app)
 data=pd.read_csv("fake_news.csv")
 
 fake_df=pickle.load(open("FakeNewsDF.pkl",'rb'))
