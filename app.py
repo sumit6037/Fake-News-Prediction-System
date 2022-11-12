@@ -6,6 +6,7 @@ import pickle
 
 app= Flask(__name__)
 CORS(app)
+
 data=pd.read_csv("fake_news.csv")
 
 fake_df=pickle.load(open("FakeNewsDF.pkl",'rb'))
